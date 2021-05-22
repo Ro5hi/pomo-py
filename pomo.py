@@ -1,13 +1,25 @@
 import time
 
-t = int(input("How much time do you want to set?"))
+# t = int(input("How much time do you want to set?"))
 
-while t:
-    mins = t // 60
-    secs = t % 60
-    timer = '{:02d}:{0:2d}'.format(mins, secs)
+# while t:
+#     mins = t // 60
+#     secs = t % 60
+#     timer = '{:02d}:{0:2d}'.format(mins, secs)
 
-    print(timer, end="\r") 
-    time.sleep(1)
-    t -= 1    
-    print('Rest time!')
+#     print(timer, end="\r") 
+#     time.sleep(1)
+#     t -= 1    
+#     print('Rest time!')
+    
+    print("Starting pomodoro.")
+    for i in range(4):
+        t = 25*60
+        while t:
+            mins = t // 60
+            secs = t % 60
+            timer = '{:02d}:{:02d}'.format(mins, secs)
+            print(" " + timer, end="\r")
+            time.sleep(1)
+            t -= 1
+        print("Take a break!")
